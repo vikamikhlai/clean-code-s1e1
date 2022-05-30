@@ -42,17 +42,17 @@
 }
 
 .lists {
-    margin:0;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .list {
-    list-style:none;
+    list-style: none;
 }
 
 input,
 button {
-    outline:none;
+    outline: none;
 }
 
 button {
@@ -156,14 +156,14 @@ button.delete img:hover {
 
 /* Edit Task */
 .lists li input[type=text] {
-    display:none;
+    display: none;
 }
 
 .lists li.editMode input[type=text] {
-    display:inline-block;
-    width:224px;
+    display: inline-block;
+    width: 224px;
 }
 
 .lists li.editMode label {
-    display:none;
+    display: none;
 }
