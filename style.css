@@ -135,7 +135,7 @@ input#new-task {
 }
 
 .list > input[type="text"] {
-    width: 226px
+    width: 226px;
 }
 
 button.delete img {
@@ -150,18 +150,18 @@ button.delete img:hover {
 
 /* Completed */
 .lists#completed-tasks label {
-    text-decoration: line-through
+    text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
 .lists li input[type=text] {
-    display:none
+    display:none;
 }
 
 .lists li.editMode input[type=text] {
     display:inline-block;
-    width:224px
+    width:224px;
 }
 
 .lists li.editMode label {
