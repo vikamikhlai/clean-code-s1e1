@@ -5,33 +5,34 @@
     font-family: Lato, sans-serif;
 }
 
-.aaa {
+.vizual {
     width: 500px;
-    margin: 0 auto;
-    display: block;
     text-align: right;
 }
 
-.aaa img {
+.vizual img {
     width: 100%;
 }
 
-.aaa .more-inf {
+.section {
+    margin: 0 auto; 
+    display: block;
+}
+
+.vizual_link {
     font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .aaa { 
+  .vizual { 
     text-align: center;
   }
 
 }
 
-.centered-page {
-    display: block;
+.main {
     width: 500px;
-    margin: 0 auto 0;
 }
 
 .task {
@@ -40,17 +41,17 @@
     flex-grow: 1
 }
 
-.task-row-wrapper {
+.input-wrapper {
     display: flex;
     margin-bottom: 16px;
 }
 
-.lists {
+.main_lists {
     margin: 0;
     padding: 0;
 }
 
-.list {
+.main_list {
     list-style: none;
 }
 
@@ -74,7 +75,7 @@ button:hover {
 }
 
 /* Heading */
-.title-section {
+.main_title {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -86,7 +87,7 @@ button:hover {
     margin: 0;
 }
 
-.title-section:first-child {
+.main_title:first-child {
     margin: 15px 0 20px 0;
 }
 
@@ -113,7 +114,7 @@ input#new-task {
 }
 
 /* Task list */
-.list {
+.main_list {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -123,22 +124,22 @@ input#new-task {
     align-items: center;
 }
 
-.list > * {
+.main_list > * {
     vertical-align: middle;
 }
 
-.list > input[type="checkbox"] {
+.main_list > input[type="checkbox"] {
     margin: 0 10px;
 }
 
-.list > label {
+.main_list > label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
 
-.list > input[type="text"] {
+.main_list > input[type="text"] {
     width: 226px;
 }
 
@@ -153,20 +154,20 @@ button.delete img:hover {
 }
 
 /* Completed */
-.lists#completed-tasks label {
+.main_lists#completed-tasks label {
     color: #888;
 }
 
 /* Edit Task */
-.lists li input[type=text] {
+.main_lists li input[type=text] {
     display: none;
 }
 
-.lists li.editMode input[type=text] {
+.main_lists li.edit-list input[type=text] {
     display: inline-block;
     width: 224px;
 }
 
-.lists li.editMode label {
+.main_lists li.edit-list label {
     display: none;
 }
