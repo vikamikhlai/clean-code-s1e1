@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.getElementById("add-btn");//first button
 var incompleteTaskHolder=document.getElementById("todo-tasks");//ul of #todo-tasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
@@ -35,18 +35,20 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task';
+    label.className='task main_list__label';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="input-checkbox";
     editInput.type="text";
-    editInput.className="task";
+    editInput.classList.add("task");
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="edit btn";
 
-    deleteButton.className="delete";
+    deleteButton.className="delete btn";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className='main_list__img';
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -149,7 +151,7 @@ var ajaxRequest=function(){
 
 
 //Set the click handler to the addTask function.
-addButton.onclick=addTask;
+// addButton.onclick=addTask;
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
 
