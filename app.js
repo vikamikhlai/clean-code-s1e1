@@ -18,7 +18,7 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
-    listItem.classList.add('main_list');
+    listItem.classList.add('main__list-item');
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -35,7 +35,7 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task main_list__label';
+    label.className='task main__list-label';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -44,11 +44,11 @@ var createNewTaskElement=function(taskString){
     editInput.classList.add("task");
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit btn";
+    editButton.className="btn btn_edit";
 
-    deleteButton.className="delete btn";
+    deleteButton.className="btn btn_delete";
     deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.className='main_list__img';
+    deleteButtonImg.className='img';
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -88,7 +88,7 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
+    var editBtn=listItem.querySelector(".btn_edit");
     var containsClass=listItem.classList.contains("edit-list");
     //If class of the parent is .edit-list
     if(containsClass){
@@ -160,8 +160,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var editButton=taskListItem.querySelector("button.btn_edit");
+    var deleteButton=taskListItem.querySelector("button.btn_delete");
 
 
     //Bind editTask to edit button.
